@@ -1,10 +1,19 @@
 <template>
   <div id="app">
+    <h2>Routing</h2>
     <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
+      <router-link
+        :to="{
+          name: 'User',
+          params: { id: 10 },
+          query: { status: 'awesome' },
+        }"
+        >User With ID</router-link
+      >
     </div>
-    <router-view/>
+    <hr />
+    <router-view />
   </div>
 </template>
 
